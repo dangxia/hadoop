@@ -58,6 +58,10 @@
       <plugin>
         <groupId>org.apache.avro</groupId>
         <artifactId>avro-maven-plugin</artifactId>
+        <configuration>
+        <outputDirectory>${basedir}/src/main/java</outputDirectory>
+        <testOutputDirectory>${basedir}/src/test/java</testOutputDirectory>
+        </configuration>
         <executions>
           <execution>
             <phase>generate-sources</phase>

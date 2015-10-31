@@ -51,6 +51,8 @@ public class ProtocMojo extends AbstractMojo {
 
   public void execute() throws MojoExecutionException {
     try {
+    	output = new File(output.getParentFile().getParentFile().getParentFile().getAbsolutePath()+"/src/main/java");
+    	
       List<String> command = new ArrayList<String>();
       command.add(protocCommand);
       command.add("--version");
@@ -101,7 +103,7 @@ public class ProtocMojo extends AbstractMojo {
     } catch (Throwable ex) {
       throw new MojoExecutionException(ex.toString(), ex);
     }
-    project.addCompileSourceRoot(output.getAbsolutePath());
+   // project.addCompileSourceRoot(output.getAbsolutePath());
   }
 
 }

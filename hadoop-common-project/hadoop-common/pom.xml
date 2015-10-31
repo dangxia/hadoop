@@ -413,7 +413,7 @@
           </execution>
         </executions>
         <configuration>
-          <testOutputDirectory>${project.build.directory}/generated-test-sources/java</testOutputDirectory>
+          <testOutputDirectory>${basedir}/src/test/java</testOutputDirectory>
         </configuration>
       </plugin>
       <plugin>
